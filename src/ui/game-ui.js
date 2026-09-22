@@ -59,7 +59,7 @@ export function renderGameUi(state, level) {
     success.className = "success-screen";
     success.setAttribute("aria-label", `Level complete. ${state.stars} out of 3 stars.`);
     success.innerHTML = `
-      <img class="success-screen__background" src="assets/ui/start-background.png" alt="" />
+      <img class="success-screen__background" src="assets/backgrounds/food_we_eat_bg_blurred_matching.png" alt="" />
       <div class="success-dance" role="button" tabindex="0" aria-label="Restart Sparky's moonwalk">
         <div class="success-dance__viewport"><img class="success-dance__sheet" src="assets/characters/moon_walk_normalized.png" alt="" /></div>
         <div class="success-dance__effects" aria-hidden="true"></div>
@@ -98,7 +98,7 @@ export function renderGameUi(state, level) {
     pause.className = "pause-screen";
     pause.setAttribute("aria-label", "Game paused");
     pause.innerHTML = `
-      <img class="pause-screen__background" src="assets/ui/start-background.png" alt="" />
+      <img class="pause-screen__background" src="assets/backgrounds/food_we_eat_bg_blurred_matching.png" alt="" />
       <img class="pause-screen__mascot" src="assets/ui/12_peek_wave_2048 2.png" alt="Sparky waving" />
       <img class="pause-screen__panel" src="assets/ui/21699a15ad6312465e63b85b73ddad4fbd18816d.png" alt="Take a Break" />
       <div class="pause-screen__controls">

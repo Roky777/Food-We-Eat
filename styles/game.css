@@ -45,30 +45,32 @@ body {
 .start-screen__background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .start-screen__logo {
   position: absolute;
-  top: -5%;
+  top: -4%;
   left: 50%;
   z-index: 1;
-  width: clamp(10rem, 36cqw, 39rem);
+  width: min(36cqw, 64cqh);
   height: auto;
   transform: translateX(-50%);
   filter: drop-shadow(0 .65cqw .35cqw rgb(8 84 130 / 28%));
 }
 .start-screen__character {
   position: absolute;
+  /* Let Sparky peek over the Play button: the button masks the lower body,
+     while the lowered head no longer covers the logo's subtitle badge. */
   bottom: 6%;
   left: 50%;
   z-index: 2;
-  width: clamp(8rem, 28cqw, 29rem);
+  width: min(28cqw, 48cqh);
   height: auto;
   transform: translateX(-50%);
   filter: drop-shadow(0 .8cqw .45cqw rgb(5 78 107 / 34%));
 }
 .start-screen__play {
   position: absolute;
-  bottom: 6%;
+  bottom: 7%;
   left: 50%;
   z-index: 3;
-  width: clamp(7rem, 22.5cqw, 23rem);
+  width: min(22.5cqw, 35cqh);
   padding: 0;
   border: 0;
   background: transparent;
@@ -326,8 +328,13 @@ body.game-runtime-loaded .conveyor__front-beam {
 .sorting-bins[data-count="2"] .sorting-bin { flex-basis: 23vw; flex-basis: 23cqw; width: 23vw; width: 23cqw; }
 .sorting-bins[data-count="3"] { gap: 2.4vw; gap: 2.4cqw; }
 .sorting-bins[data-count="3"] .sorting-bin { flex-basis: 18vw; flex-basis: 18cqw; width: 18vw; width: 18cqw; }
-.sorting-bins[data-count="5"] { gap: .7vw; gap: .7cqw; padding-inline: 1.1cqw; }
-.sorting-bins[data-count="5"] .sorting-bin { flex-basis: 13.6vw; flex-basis: 13.6cqw; width: 13.6vw; width: 13.6cqw; }
+.sorting-bins[data-count="5"] { gap: .9vw; gap: .9cqw; padding-inline: 1.1cqw; }
+.sorting-bins[data-count="5"] .sorting-bin {
+  flex-basis: min(17vw, 38vh);
+  flex-basis: min(17cqw, 38cqh);
+  width: min(17vw, 38vh);
+  width: min(17cqw, 38cqh);
+}
 
 /* Cardboard box image - single layer since artwork includes icon/label */
 .sorting-bin__image {
@@ -343,10 +350,11 @@ body.game-runtime-loaded .conveyor__front-beam {
 .sorting-bin__category-icon {
   position: absolute;
   z-index: 2;
-  top: 31%;
+  /* Centre artwork inside the white circular badge in the supplied bin art. */
+  top: 32%;
   left: 50%;
-  width: 32%;
-  height: 37%;
+  width: 30%;
+  height: 39%;
   object-fit: contain;
   transform: translateX(-50%);
   pointer-events: none;
@@ -355,18 +363,28 @@ body.game-runtime-loaded .conveyor__front-beam {
   position: absolute;
   z-index: 3;
   right: 15%;
-  bottom: 7.2%;
+  /* Use the artwork's full cream nameplate as a centring box. A bottom-only
+     offset placed the glyph baseline against the lower orange edge. */
+  top: 74.8%;
+  bottom: auto;
   left: 15%;
+  display: grid;
+  place-items: center;
+  height: 16.5%;
   color: #5b260f;
   font-size: clamp(.52rem, 1.25cqw, 1.12rem);
   font-weight: 900;
-  line-height: 1;
+  line-height: .95;
   text-align: center;
   text-transform: capitalize;
   text-shadow: 0 .06em 0 #fff5d6;
   pointer-events: none;
 }
-.sorting-bins[data-count="5"] .sorting-bin__category-label { font-size: clamp(.45rem, .9cqw, .82rem); }
+.sorting-bins[data-count="5"] .sorting-bin__category-label {
+  right: 17%;
+  left: 17%;
+  font-size: clamp(.58rem, 1.05cqw, 1rem);
+}
 .sorting-bin__leaves {
   position: absolute;
   z-index: 0;
@@ -652,13 +670,15 @@ body.game-runtime-loaded .conveyor__front-beam {
 }
 .pause-screen { position: absolute; inset: 0; overflow: hidden; background: #62c9e1; font-family: "Fredoka", "Arial Rounded MT Bold", system-ui, sans-serif; pointer-events: auto; }
 .pause-screen__background { position: absolute; z-index: 0; inset: -2px; width: calc(100% + 4px); height: calc(100% + 4px); object-fit: cover; }
-.pause-screen__mascot { position: absolute; z-index: 1; top: 8%; left: 9%; width: 36cqw; height: auto; filter: drop-shadow(0 .65cqw .35cqw rgb(5 78 107 / 28%)); animation: pause-mascot-arrive 480ms cubic-bezier(.2,.85,.28,1) both; }
-.pause-screen__panel { position: absolute; z-index: 2; top: 0; left: 50%; width: 75cqw; height: auto; transform: translateX(-50%); filter: drop-shadow(0 .65cqw .35cqw rgb(5 78 107 / 24%)); animation: pause-panel-arrive 360ms cubic-bezier(.2,.86,.32,1) both; }
-.pause-screen__controls { position: absolute; z-index: 3; inset: 0; }
-.pause-screen__hotspot { position: absolute; left: 39%; width: 24.5%; height: 11.5%; padding: 0; border: 0; border-radius: 999px; background: transparent; cursor: pointer; }
-.pause-screen__hotspot--resume { top: 42.5%; }
-.pause-screen__hotspot--restart { top: 55.5%; }
-.pause-screen__hotspot--home { top: 69.5%; }
+.pause-screen__mascot { position: absolute; z-index: 1; top: 13%; left: 18%; width: min(34cqw, 62cqh); height: auto; filter: drop-shadow(0 .65cqw .35cqw rgb(5 78 107 / 28%)); animation: pause-mascot-arrive 480ms cubic-bezier(.2,.85,.28,1) both; }
+/* The panel PNG includes a large transparent canvas. Size that canvas from
+   stage height so the visible card and its Home button always remain in view. */
+.pause-screen__panel { position: absolute; z-index: 2; top: 2%; left: 50%; width: auto; height: 96vh; height: 96cqh; transform: translateX(-50%); filter: drop-shadow(0 .65cqw .35cqw rgb(5 78 107 / 24%)); animation: pause-panel-arrive 360ms cubic-bezier(.2,.86,.32,1) both; }
+.pause-screen__controls { position: absolute; z-index: 3; top: 2%; left: 50%; width: 128.04vh; width: 128.04cqh; height: 96vh; height: 96cqh; transform: translateX(-50%); }
+.pause-screen__hotspot { position: absolute; left: 35.3%; width: 32.7%; height: 10.7%; padding: 0; border: 0; border-radius: 999px; background: transparent; cursor: pointer; }
+.pause-screen__hotspot--resume { top: 43.4%; }
+.pause-screen__hotspot--restart { top: 55.6%; }
+.pause-screen__hotspot--home { top: 70%; }
 .pause-screen__hotspot:hover { box-shadow: inset 0 0 0 .3cqw rgb(255 255 255 / 55%), 0 0 .75cqw rgb(255 255 255 / 38%); }
 .pause-screen__hotspot:active { transform: scale(.96); }
 .pause-screen__hotspot:focus-visible { outline: clamp(3px, .3cqw, 5px) solid #173e8a; outline-offset: .15rem; }
@@ -861,7 +881,7 @@ body.game-runtime-loaded .conveyor__front-beam {
     justify-items: center;
     gap: 0.55rem;
     padding: max(1.25rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right)) max(1.25rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
-    background: linear-gradient(rgb(168 239 244 / 82%), rgb(58 185 215 / 82%)), url("../assets/backgrounds/shape-lab-factory.png") center / cover;
+    background: linear-gradient(rgb(255 241 208 / 70%), rgb(102 204 227 / 68%)), url("../assets/backgrounds/food_we_eat_bg_blurred_matching.png") center / cover;
     color: #663017;
     text-align: center;
   }
