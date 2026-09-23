@@ -5,7 +5,8 @@ const LEVELS = [
     title: "Parts of Plants We Eat",
     instruction: "Sort each food by the plant part we eat.",
     showNames: true,
-    maxOnBelt: 4,
+    maxOnBelt: 3,
+    beltTravelRate: 0.07,
     bins: [
       { id: "fruits", label: "Fruits", art: "mango" },
       { id: "leaves", label: "Leaves", art: "cabbage" },
@@ -26,6 +27,7 @@ const LEVELS = [
     instruction: "Sort each food by where it comes from.",
     showNames: true,
     maxOnBelt: 4,
+    beltTravelRate: 0.08,
     bins: [
       { id: "plants", label: "Plants", art: "mango" },
       { id: "animals", label: "Animals", art: "egg" },
