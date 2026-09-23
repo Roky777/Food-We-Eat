@@ -59,18 +59,18 @@ export function renderGameUi(state, level) {
     success.className = "success-screen";
     success.setAttribute("aria-label", `Level complete. ${state.stars} out of 3 stars.`);
     success.innerHTML = `
-      <img class="success-screen__background" src="assets/backgrounds/food_we_eat_bg_blurred_matching.png" alt="" />
+      <img class="success-screen__background" src="assets/backgrounds/food_we_eat_bg_blurred_matching.webp" alt="" />
       <div class="success-dance" role="button" tabindex="0" aria-label="Restart Sparky's moonwalk">
-        <div class="success-dance__viewport"><img class="success-dance__sheet" src="assets/characters/moon_walk_normalized.png" alt="" /></div>
+        <div class="success-dance__viewport"><img class="success-dance__sheet" src="assets/characters/moon_walk_normalized.webp" alt="" /></div>
         <div class="success-dance__effects" aria-hidden="true"></div>
       </div>
-      <img class="success-screen__title" src="assets/ui/image 18.png" alt="All sorted! Great job!" />
+      <img class="success-screen__title" src="assets/ui/image 18.webp" alt="All sorted! Great job!" />
       <div class="success-screen__reward">
         <div class="success-screen__stars" aria-label="${state.stars} out of 3 stars">
           ${[
-            "success-star-1.png",
-            "success-star-2.png",
-            "success-star-3.png",
+            "success-star-1.webp",
+            "success-star-2.webp",
+            "success-star-3.webp",
           ].map((source, index) => `<span class="success-star success-star--${index + 1}${index < state.stars ? " success-star--earned" : ""}" style="--star-index:${index}"><img src="assets/ui/${source}" alt="" /></span>`).join("")}
         </div>
         <p class="success-screen__score"><span>Level score</span><strong>${state.levelScore}</strong></p>
@@ -98,9 +98,9 @@ export function renderGameUi(state, level) {
     pause.className = "pause-screen";
     pause.setAttribute("aria-label", "Game paused");
     pause.innerHTML = `
-      <img class="pause-screen__background" src="assets/backgrounds/food_we_eat_bg_blurred_matching.png" alt="" />
-      <img class="pause-screen__mascot" src="assets/ui/12_peek_wave_2048 2.png" alt="Sparky waving" />
-      <img class="pause-screen__panel" src="assets/ui/21699a15ad6312465e63b85b73ddad4fbd18816d.png" alt="Take a Break" />
+      <img class="pause-screen__background" src="assets/backgrounds/food_we_eat_bg_blurred_matching.webp" alt="" />
+      <img class="pause-screen__mascot" src="assets/ui/12_peek_wave_2048 2.webp" alt="Sparky waving" />
+      <img class="pause-screen__panel" src="assets/ui/21699a15ad6312465e63b85b73ddad4fbd18816d.webp" alt="Take a Break" />
       <div class="pause-screen__controls">
         <button class="pause-screen__hotspot pause-screen__hotspot--resume" data-action="resume" type="button" aria-label="Resume game"></button>
         <button class="pause-screen__hotspot pause-screen__hotspot--restart" data-action="request-restart" type="button" aria-label="Restart level"></button>
