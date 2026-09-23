@@ -20,9 +20,10 @@ export function renderGameUi(state, level) {
     card.innerHTML = `
       <div class="game-certificate__sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       <div class="game-certificate__crest" aria-hidden="true"><span>★</span></div>
+      <div class="game-certificate__ribbon"><span>All levels complete</span></div>
       <p class="game-certificate__eyebrow">Food Factory Champion</p>
       <h2>Food Sorting <em>Master!</em></h2>
-      <p class="game-certificate__subtitle">Both levels complete!</p>
+      <div class="game-certificate__victory-stars" aria-label="Campaign victory"><i>★</i><i>★</i><i>★</i></div>
       <div class="game-certificate__results" aria-label="Campaign results">
         <div><i aria-hidden="true">✓</i><span><small>Levels</small><strong>${MATH_LEVELS.length}<b>/${MATH_LEVELS.length}</b></strong></span></div>
         <div><i aria-hidden="true">XP</i><span><small>XP earned</small><strong>${formatXp(state.campaignXp)}<b>/200</b></strong></span></div>
