@@ -19,7 +19,7 @@ const LEVELS = [
       item("Mango", "mango", "fruits"), item("Apple", "apple", "fruits"),
       item("Potato", "potato", "stems"), item("Ginger", "ginger", "stems"),
       item("Carrot", "carrot", "roots"), item("Beetroot", "beetroot", "roots"),
-      item("Pulses", "pulses", "seeds"), item("Dry fruits", "dryfruits", "seeds"),
+      item("Pulses", "pulses", "seeds"), item("Almonds and cashews", "dryfruits", "seeds"),
     ],
   },
   {
@@ -37,7 +37,7 @@ const LEVELS = [
       item("Radish", "radish", "plants"), item("Onion", "onion", "plants"),
       item("Grains", "grains", "plants"), item("Spinach", "spinach", "plants"),
       item("Egg", "egg", "animals"), item("Milk", "milk", "animals"),
-      item("Chicken", "chicken", "animals"), item("Honey", "honey", "animals"),
+      item("Chicken meat", "chicken", "animals"), item("Honey made by bees", "honey", "animals"),
     ],
   },
 ];

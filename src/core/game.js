@@ -1,4 +1,4 @@
-import { getLevel, MATH_LEVELS } from "../data/math-levels.js?v=20260923-level-pacing-1";
+import { getLevel, MATH_LEVELS } from "../data/math-levels.js?v=20260923-content-audit-1";
 import { createInitialState } from "./state.js?v=20260923-xp-smooth-1";
 import { bindInput } from "./input.js";
 import { createSounds } from "./sounds.js?v=20260923-xp-smooth-1";
