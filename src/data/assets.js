@@ -25,10 +25,26 @@ export function resolveMathArt(artId, assetSet) {
 const blankBin = "assets/ui/sorting-bin-blank.png";
 
 export const assets = {
-  characters: { idle: "assets/characters/idle.png", presentation: "assets/characters/final_presentation_clean.png" },
+  characters: {
+    idle: "assets/characters/idle.png",
+    presentation: "assets/characters/final_presentation_clean.png",
+    correct: "assets/characters/modified_thubms_up.png",
+    nod: "assets/characters/updated_nod.png",
+    happy: "assets/characters/happy.png",
+    thinking: "assets/characters/thinking.png",
+    surprised: "assets/characters/surprised.png",
+    successDance: "assets/characters/moon_walk_normalized.png",
+  },
   backgrounds: {},
   items: { math: levelArt.level1, mathByLevel: levelArt },
   ui: {
+    success: [
+      "assets/ui/start-background.png",
+      "assets/ui/image 18.png",
+      "assets/ui/success-star-1.png",
+      "assets/ui/success-star-2.png",
+      "assets/ui/success-star-3.png",
+    ],
     conveyorRims: "assets/ui/conveyor-rims.png",
     conveyorFrame: "assets/ui/conveyor-frame.png",
     conveyorTrackMask: "assets/ui/conveyor-track.png",
