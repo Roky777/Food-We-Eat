@@ -5,10 +5,10 @@ import { createSounds } from "./sounds.js?v=20260923-xp-smooth-1";
 import { renderHud } from "../render/hud.js?v=20260924-integer-xp-1";
 import { renderScene } from "../render/scene.js?v=20260923-seamless-1";
 import { getBeltTravelRate, setBeltTravelRate } from "../render/conveyor.js?v=20260923-seamless-1";
-import { renderGameUi } from "../ui/game-ui.js?v=20260924-integer-xp-1";
+import { renderGameUi } from "../ui/game-ui.js?v=20260925-h3-assets-1";
 import { TutorialController } from "../tutorial/tutorial-controller.js?v=20260925-stable-bin-2";
 import { clearGameSave, readGameSave, saveHighestLevel } from "./save.js";
-import { preloadLevelAssets } from "../data/assets.js?v=20260923-seamless-1";
+import { preloadLevelAssets } from "../data/assets.js?v=20260925-h3-assets-1";
 import { createGameAnalytics, getLevelXpMaximum, getObjectXp } from "./analytics.js?v=20260924-integer-xp-1";
 import { getStarThresholds, getStarsForXp } from "./scoring.js?v=20260924-integer-xp-1";
 

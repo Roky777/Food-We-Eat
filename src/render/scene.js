@@ -1,4 +1,4 @@
-import { assets, resolveMathArt } from "../data/assets.js?v=20260923-seamless-1";
+import { assets, resolveMathArt } from "../data/assets.js?v=20260925-h3-assets-1";
 
 function art(artId, className = "", assetSet) {
   const icon = document.createElement("img");

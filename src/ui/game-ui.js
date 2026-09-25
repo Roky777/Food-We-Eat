@@ -68,7 +68,7 @@ export function renderGameUi(state, level) {
     success.innerHTML = `
       <img class="success-screen__background" src="assets/backgrounds/food_we_eat_bg_blurred_matching.webp" alt="" />
       <div class="success-dance" role="button" tabindex="0" aria-label="Restart Sparky's moonwalk">
-        <div class="success-dance__viewport"><img class="success-dance__sheet" src="assets/characters/moon_walk_normalized.webp" alt="" /></div>
+        <div class="success-dance__viewport"><img class="success-dance__sheet" src="assets/ui/sparky/moon_walk_normalized.webp" alt="" /></div>
         <div class="success-dance__effects" aria-hidden="true"></div>
       </div>
       <img class="success-screen__title" src="assets/ui/image 18.webp" alt="All sorted! Great job!" />

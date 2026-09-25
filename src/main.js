@@ -1,6 +1,6 @@
-import { createGame } from "./core/game.js?v=20260925-stable-bin-2";
+import { createGame } from "./core/game.js?v=20260925-h3-assets-1";
 import { startConveyorAnimation } from "./render/conveyor.js?v=20260923-seamless-1";
-import { assets, hydrateDeferredImages, preloadImage, preloadLevelAssets } from "./data/assets.js?v=20260923-seamless-1";
+import { assets, hydrateDeferredImages, preloadImage, preloadLevelAssets } from "./data/assets.js?v=20260925-h3-assets-1";
 import { MATH_LEVELS } from "./data/math-levels.js?v=20260923-content-audit-1";
 import { registerRuntimeCache, runStartupLoader, scheduleIdle, waitForImages } from "./core/startup.js?v=20260923-seamless-1";
 
@@ -19,8 +19,8 @@ let sparkyFrameTime = performance.now();
 function loadControllers() {
   if (controllerRequest) return controllerRequest;
   controllerRequest = Promise.all([
-    import("./characters/sparky-controller.js?v=20260923-runtime-smooth-2"),
-    import("./characters/success-dance-controller.js?v=20260923-runtime-smooth-2"),
+    import("./characters/sparky-controller.js?v=20260925-h3-assets-1"),
+    import("./characters/success-dance-controller.js?v=20260925-h3-assets-1"),
   ]).then(([sparkyModule, danceModule]) => {
     sparky = new sparkyModule.SparkyController(document.querySelector("#sparky"));
     successDance = new danceModule.SuccessDanceController();

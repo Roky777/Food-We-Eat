@@ -24,7 +24,12 @@ export class SuccessDanceController {
 
     // The 1.6 MB dance sheet is requested only when the success screen opens.
     this.image.decoding = "async";
-    this.image.src = "assets/characters/moon_walk_normalized.webp";
+    this.image.onerror = () => {
+      if (this.image.dataset.fallback === "true") return;
+      this.image.dataset.fallback = "true";
+      this.image.src = "assets/characters/moon_walk_normalized.png";
+    };
+    this.image.src = "assets/ui/sparky/moon_walk_normalized.webp";
     this.element.addEventListener("click", this.handleActivation);
     this.element.addEventListener("keydown", this.handleActivation);
     this.setFrame(0);
